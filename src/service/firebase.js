@@ -10,6 +10,9 @@ const firebaseConfig = {
   //   measurementId: "G-NZKE3925XR"
 };
 
+console.log(process.env.REACT_APP_FIREBASE_API_KEY);
+// API invalid 어쩌구 에러가 떠서 콘솔 찍었는데 undefined떠서 개멘붕왔는데, 서버 재시작하니까 되넹^^?;
+
 // Initialize Firebase
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 export default firebaseApp;
