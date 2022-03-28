@@ -2,7 +2,12 @@ import React from "react";
 import Footer from "../footer/footer";
 import Header from "../header/header";
 
-const Login = (props) => {
+const Login = ({ authService }) => {
+  const onLogin = (event) => {
+    authService //
+      .login(event.currentTarget.textContent)
+      .then(console.log);
+  };
   return (
     <section>
       <Header />
@@ -10,10 +15,10 @@ const Login = (props) => {
         <h1>Login</h1>
         <ul>
           <li>
-            <button>Google</button>
+            <button onClick={onLogin}>Google</button>
           </li>
           <li>
-            <button>Github</button>
+            <button onClick={onLogin}>Github</button>
           </li>
         </ul>
       </section>
