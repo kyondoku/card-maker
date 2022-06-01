@@ -18,14 +18,15 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
       [event.currentTarget.name]: event.currentTarget.value,
     });
   };
-  const onSubmit = () => {};
+  const onSubmit = () => {
+    deleteCard(card);
+  };
   return (
     <form className={styles.form}>
       <input
         className={styles.input}
         type="text"
         name="name"
-        ref={nameRef}
         value={name}
         onChange={onChange}
       />
@@ -33,14 +34,12 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
         className={styles.input}
         type="text"
         name="company"
-        ref={companyRef}
         value={company}
         onChange={onChange}
       />
       <select
         className={styles.select}
         name="theme"
-        ref={themeRef}
         value={theme}
         onChange={onChange}
       >
@@ -52,7 +51,6 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
         className={styles.input}
         type="text"
         name="title"
-        ref={titleRef}
         value={title}
         onChange={onChange}
       />
@@ -60,14 +58,12 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
         className={styles.input}
         type="text"
         name="email"
-        ref={emailRef}
         value={email}
         onChange={onChange}
       />
       <textarea
         className={styles.textarea}
         name="message"
-        ref={messageRef}
         value={message}
         onChange={onChange}
       />
