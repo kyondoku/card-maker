@@ -1,10 +1,8 @@
 import React from "react";
 import styles from "./card_edit_form.module.css";
 import Button from "../button/button";
-import ImageFileInput from "../image_file_input/image_file_input";
-import { eventWrapper } from "@testing-library/user-event/dist/utils";
 
-const CardEditForm = ({ card, updateCard, deleteCard }) => {
+const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
   const { name, company, title, email, message, theme, fileName, fileURL } =
     card;
 
@@ -68,7 +66,7 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
         onChange={onChange}
       />
       <div className={styles.fileInput}>
-        <ImageFileInput />
+        <FileInput />
       </div>
       <Button name="Delete" onClick={onSubmit} />
     </form>
