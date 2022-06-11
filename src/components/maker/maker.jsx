@@ -24,7 +24,7 @@ const Maker = ({ FileInput, authService }) => {
       name: "Rubok",
       company: "Fasto",
       theme: "light",
-      title: "Software Engineer",
+      title: "Software Engineer", 
       email: "rubok@gmail.com",
       message: "go for it",
       fileName: "rubok",
